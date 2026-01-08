@@ -1,17 +1,17 @@
 import requests
 
 def get_weather() -> None:
-    api_key = "5b86ef3c0e204fdbab2150451260801"
-    city = "Paris"
-    url = "https://api.weatherapi.com/v1/current.json"
+    API_KEY = "5b86ef3c0e204fdbab2150451260801"
+    CITY = "Paris"
+    URL = "https://api.weatherapi.com/v1/current.json"
 
     params = {
-        "key": api_key,
-        "q": city,
+        "key": API_KEY,
+        "q": CITY,
         "lang": "en",
     }
 
-    response = requests.get(url, params=params, timeout=10)
+    response = requests.get(URL, params=params, timeout=10)
     response.raise_for_status()
 
     data = response.json()
