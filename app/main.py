@@ -4,6 +4,7 @@ import requests
 CITY = "Paris"
 URL = "https://api.weatherapi.com/v1/current.json"
 
+
 def get_weather() -> None:
     try:
         api_key = os.getenv("api_key")
@@ -35,6 +36,7 @@ def get_weather() -> None:
         print("Error: Failed to parse JSON response from API.")
     except KeyError as e:
         print(f"Error: Missing expected data in API response: {e}")
+
 
 if __name__ == "__main__":
     get_weather()
