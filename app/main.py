@@ -1,5 +1,6 @@
 import requests
 
+
 def get_weather() -> None:
     API_KEY = "5b86ef3c0e204fdbab2150451260801"
     CITY = "Paris"
@@ -25,6 +26,7 @@ def get_weather() -> None:
         f"Weather: {current['temp_c']} Celsius, "
         f"{current['condition']['text']}"
     )
+
 
 if __name__ == "__main__":
     get_weather()
